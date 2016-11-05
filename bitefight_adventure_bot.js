@@ -1,9 +1,9 @@
 // ==UserScript==
-// @name        BFA
+// @name        Bitefight adventure bot
 // @namespace   danoplaskur@centrum.sk
-// @description Bitefight addventure bot
+// @description Bot for bitefight
 // @include     http://s14.sk.bitefight.gameforge.com/city/adventure/*
-// @version     1
+// @version     2
 // @grant       none
 // ==/UserScript==
 // Empty array
@@ -16,34 +16,72 @@ for(i=0;i<btn.length;i++){
 // Set to adventure url
 window.location.href = "http://s14.sk.bitefight.gameforge.com/city/adventure/";
 //Choose decision if array contains else random decision
-if(getHealth() >= 10000){
-	if(chooses.includes("Začať dobrodružstvo")){
-		btn[chooses.indexOf("Začať dobrodružstvo")].click();
-	}else if(chooses.includes("Pokračovať (3 AB)")){
-		btn[chooses.indexOf("Pokračovať (3 AB)")].click();
-	}else if(chooses.includes("Pokračovať")){
-		btn[chooses.indexOf("Pokračovať")].click();
-	}else if(chooses.includes("Vyrabovať mesto")){
-		btn[chooses.indexOf("Vyrabovať mesto")].click();
-	}else if(chooses.includes("Vyrabovať")){
-		btn[chooses.indexOf("Vyrabovať")].click();
-	}else if(chooses.includes("Zožrať")){
-		btn[chooses.indexOf("Zožrať")].click();
-	}else if(chooses.includes("Eskortovať")){
-		btn[chooses.indexOf("Eskortovať")].click();
-	}else if(chooses.includes("Čeliť protivníkovi") && getHealth() >= 10000){
-		btn[chooses.indexOf("Čeliť protivníkovi")].click();
-	}else if(chooses.includes("Zaútočiť") && getHealth() >= 10000){
-		btn[chooses.indexOf("Zaútočiť")].click();
-	}else if(chooses.includes("Nájsť lepšiu cestu")){
-		btn[chooses.indexOf("Nájsť lepšiu cestu")].click();
-	}else if(chooses.includes("Hľadať šťastie v nešťastí")){
-		btn[chooses.indexOf("Hľadať šťastie v nešťastí")].click();
-	}else if(chooses.includes("Vzdorovať")){
-		btn[chooses.indexOf("Vzdorovať")].click();
+if(getHealth() > 5000){
+	if(getHealth() > 10000){
+		if(chooses.includes("Začať dobrodružstvo")){
+			btn[chooses.indexOf("Začať dobrodružstvo")].click();
+		}else if(chooses.includes("Pokračovať (3 AB)")){
+			btn[chooses.indexOf("Pokračovať (3 AB)")].click();
+		}else if(chooses.includes("Pokračovať")){
+			btn[chooses.indexOf("Pokračovať")].click();
+		}else if(chooses.includes("Vyrabovať mesto")){
+			btn[chooses.indexOf("Vyrabovať mesto")].click();
+		}else if(chooses.includes("Vyrabovať")){
+			btn[chooses.indexOf("Vyrabovať")].click();
+		}else if(chooses.includes("Zožrať")){
+			btn[chooses.indexOf("Zožrať")].click();
+		}else if(chooses.includes("Vstúpiť do lesa")){
+			btn[chooses.indexOf("Vstúpiť do lesa")].click();
+		}else if(chooses.includes("Zostať na tomto mieste")){
+			btn[chooses.indexOf("Zostať na tomto mieste")].click();
+		}else if(chooses.includes("Kráčať horskou cestou")){
+			btn[chooses.indexOf("Kráčať horskou cestou")].click();
+		}else if(chooses.includes("Eskortovať")){
+			btn[chooses.indexOf("Eskortovať")].click();
+		}else if(chooses.includes("Čeliť protivníkovi")){
+			btn[chooses.indexOf("Čeliť protivníkovi")].click();
+		}else if(chooses.includes("Zaútočiť")){
+			btn[chooses.indexOf("Zaútočiť")].click();
+		}else if(chooses.includes("Nájsť lepšiu cestu")){
+			btn[chooses.indexOf("Nájsť lepšiu cestu")].click();
+		}else if(chooses.includes("Hľadať šťastie v nešťastí")){
+			btn[chooses.indexOf("Hľadať šťastie v nešťastí")].click();
+		}else if(chooses.includes("Vzdorovať")){
+			btn[chooses.indexOf("Vzdorovať")].click();
+		}else{
+				btn[Math.floor((Math.random() * btn.length) + 1)].click();
+		}
 	}else{
-		if(getHealth() >= 10000){
-			btn[Math.floor((Math.random() * btn.length) + 1)].click();
+		if(chooses.includes("Začať dobrodružstvo")){
+			btn[chooses.indexOf("Začať dobrodružstvo")].click();
+		}else if(chooses.includes("Pokračovať (3 AB)")){
+			btn[chooses.indexOf("Pokračovať (3 AB)")].click();
+		}else if(chooses.includes("Pokračovať")){
+			btn[chooses.indexOf("Pokračovať")].click();
+		}else if(chooses.includes("Pozorovať")){
+			btn[chooses.indexOf("Pozorovať")].click();
+		}else if(chooses.includes("Zožrať")){
+			btn[chooses.indexOf("Zožrať")].click();
+		}else if(chooses.includes("Vstúpiť do lesa")){
+			btn[chooses.indexOf("Vstúpiť do lesa")].click();
+		}else if(chooses.includes("Zostať na tomto mieste")){
+			btn[chooses.indexOf("Zostať na tomto mieste")].click();
+		}else if(chooses.includes("Kráčať horskou cestou")){
+			btn[chooses.indexOf("Kráčať horskou cestou")].click();
+		}else if(chooses.includes("Špehovať")){
+			btn[chooses.indexOf("Špehovať")].click();
+		}else if(chooses.includes("Schovať sa")){
+			btn[chooses.indexOf("Schovať sa")].click();
+		}else if(chooses.includes("Zavraždiť")){
+			btn[chooses.indexOf("Zavraždiť")].click();
+		}else if(chooses.includes("Nájsť lepšiu cestu")){
+			btn[chooses.indexOf("Nájsť lepšiu cestu")].click();
+		}else if(chooses.includes("Hľadať šťastie v nešťastí")){
+			btn[chooses.indexOf("Hľadať šťastie v nešťastí")].click();
+		}else if(chooses.includes("Vzdorovať")){
+			btn[chooses.indexOf("Vzdorovať")].click();
+		}else{
+				btn[Math.floor((Math.random() * btn.length) + 1)].click();
 		}
 	}
 }
