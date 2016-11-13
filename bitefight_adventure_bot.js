@@ -18,24 +18,22 @@ window.location.href = "http://s14.sk.bitefight.gameforge.com/city/adventure/";
 //Choose decision if array contains else random decision
 if(getHealth() > 5000){
 	if(getHealth() > 10000){
-		if(chooses.includes("Začať dobrodružstvo")){
-			btn[chooses.indexOf("Začať dobrodružstvo")].click();
-		}else if(chooses.includes("Pokračovať (3 AB)")){
+		if(chooses.includes("Pokračovať (3 AB)")){
 			btn[chooses.indexOf("Pokračovať (3 AB)")].click();
 		}else if(chooses.includes("Pokračovať")){
 			btn[chooses.indexOf("Pokračovať")].click();
-		}else if(chooses.includes("Vyrabovať mesto")){
-			btn[chooses.indexOf("Vyrabovať mesto")].click();
 		}else if(chooses.includes("Vyrabovať")){
 			btn[chooses.indexOf("Vyrabovať")].click();
 		}else if(chooses.includes("Zožrať")){
 			btn[chooses.indexOf("Zožrať")].click();
+		}else if(chooses.includes("Vhodiť mincu")){
+			btn[chooses.indexOf("Vhodiť mincu")].click();
 		}else if(chooses.includes("Vstúpiť do lesa")){
 			btn[chooses.indexOf("Vstúpiť do lesa")].click();
+		}else if(chooses.includes("Vstúpiť do jaskyne")){
+			btn[chooses.indexOf("Vstúpiť do jaskyne")].click();
 		}else if(chooses.includes("Zostať na tomto mieste")){
 			btn[chooses.indexOf("Zostať na tomto mieste")].click();
-		}else if(chooses.includes("Kráčať horskou cestou")){
-			btn[chooses.indexOf("Kráčať horskou cestou")].click();
 		}else if(chooses.includes("Eskortovať")){
 			btn[chooses.indexOf("Eskortovať")].click();
 		}else if(chooses.includes("Čeliť protivníkovi")){
@@ -52,22 +50,22 @@ if(getHealth() > 5000){
 				btn[Math.floor((Math.random() * btn.length) + 1)].click();
 		}
 	}else{
-		if(chooses.includes("Začať dobrodružstvo")){
-			btn[chooses.indexOf("Začať dobrodružstvo")].click();
-		}else if(chooses.includes("Pokračovať (3 AB)")){
+		if(chooses.includes("Pokračovať (3 AB)")){
 			btn[chooses.indexOf("Pokračovať (3 AB)")].click();
 		}else if(chooses.includes("Pokračovať")){
 			btn[chooses.indexOf("Pokračovať")].click();
+		}else if(chooses.includes("Vhodiť mincu")){
+			btn[chooses.indexOf("Vhodiť mincu")].click();
 		}else if(chooses.includes("Pozorovať")){
 			btn[chooses.indexOf("Pozorovať")].click();
 		}else if(chooses.includes("Zožrať")){
 			btn[chooses.indexOf("Zožrať")].click();
 		}else if(chooses.includes("Vstúpiť do lesa")){
 			btn[chooses.indexOf("Vstúpiť do lesa")].click();
+		}else if(chooses.includes("Vstúpiť do jaskyne")){
+			btn[chooses.indexOf("Vstúpiť do jaskyne")].click();
 		}else if(chooses.includes("Zostať na tomto mieste")){
 			btn[chooses.indexOf("Zostať na tomto mieste")].click();
-		}else if(chooses.includes("Kráčať horskou cestou")){
-			btn[chooses.indexOf("Kráčať horskou cestou")].click();
 		}else if(chooses.includes("Špehovať")){
 			btn[chooses.indexOf("Špehovať")].click();
 		}else if(chooses.includes("Schovať sa")){
