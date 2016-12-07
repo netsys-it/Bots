@@ -3,7 +3,7 @@
 // @namespace   https://github.com/netsys-it/Bots/blob/master/gladiatus.js
 // @description Bot for gladiatus game
 // @include     https://s15-sk.gladiatus.gameforge.com/*
-// @version     1
+// @version     1.0.1
 // @grant       none
 // ==/UserScript==
 var animalClass = document.getElementsByClassName('expedition_button');
@@ -30,14 +30,19 @@ function chooseAnimal(){
 }
 
 function attackAnimal(){
- //document.getElementsByClassName('cooldown_bar_link')[0].click();
- animalClass[chooseAnimal()].click(); 
+  animalClass[chooseAnimal()].click(); 
+  /*if(!(window.location.href.indexOf("location&loc"))){
+    //TODO add location href to refresh page location
+    document.getElementsByClassName('cooldown_bar_link')[0].click();
+  }else{
+    animalClass[chooseAnimal()].click(); 
+  }*/
 }
 
 function checkTime(){
   var end_timer;
   var timer = setInterval(function(){
-    end_timer = document.getElementById('cooldown_bar_fill_expedition').innerHTML;
+    end_timer = document.getElementById('cooldown_bar_text_expedition').innerHTML;
     if(end_timer === "Na výpravu"){
       clearInterval(timer);
       attackAnimal();
