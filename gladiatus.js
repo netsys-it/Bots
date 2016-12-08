@@ -31,60 +31,30 @@ function chooseAnimal(){
 }
 
 function attackAnimal(){
-  animalClass[chooseAnimal()].click(); 
-  /*if(!(window.location.href.indexOf("location&loc"))){
-    //TODO add location href to refresh page location
-    document.getElementsByClassName('cooldown_bar_link')[0].click();
-  }else{
-    animalClass[chooseAnimal()].click(); 
-  }*/
+  animalClass[chooseAnimal()].click();
+  return;
 }
-
-function checkTime(){
-  var end_timer;
-  var timer = setInterval(function(){
-    end_timer = document.getElementById('cooldown_bar_text_expedition').innerHTML;
-    if(end_timer === "Na výpravu"){
-      clearInterval(timer);
-      attackAnimal();
-    }else{
-      console.log(end_timer);
-    }
-  },1000);
-}
-
-checkTime();
 
 var skills = {"SILA":0,"ZRUCNOST":1,"OBRATNOST":1,"ZDATNOST":0,"CHARIZMA":3,"INTELIGENCIA":0};
 
-function improveSkill()
-{
+function improveSkill(){
   var btn = document.getElementsByClassName('training_button');
   
-  if(btn.length == 6 )
-  {
+  if(btn.length == 6 ){
     btn[skills.ZRUCNOST].click();
-  }
-  else if(btn.length == 5 )
-  {
-  btn[skills.CHARIZMA].click();
-  }
-  else if(btn.length == 4)
-  {
+  }else if(btn.length == 5 ){
+    btn[skills.CHARIZMA].click();
+  }else if(btn.length == 4){
     btn[skills.OBRATNOST].click();
-  }
-  else if(btn.length == 3)
-  {
+  }else if(btn.length == 3){
     btn[skills.SILA].click();  //sila
-  }
-  else if(btn.length == 2 )
-  {
+  }else if(btn.length == 2 ){
     btn[skills.ZDATNOST].click(); 	// zdatnost
-  }
-  else if(btn.length == 1)
-  {
+  }else if(btn.length == 1){
     btn[skills.INTELIGENCIA].click();  //inteligencia
   }
+ return;
 }
 
+attackAnimal();
 improveSkill();
