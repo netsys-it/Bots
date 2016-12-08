@@ -3,6 +3,7 @@
 // @namespace   https://github.com/netsys-it/Bots/blob/master/gladiatus.js
 // @description Bot for gladiatus game
 // @include     https://s15-sk.gladiatus.gameforge.com/*
+// @require http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js
 // @version     1.0.2
 // @grant       none
 // ==/UserScript==
