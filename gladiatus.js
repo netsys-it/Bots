@@ -3,7 +3,7 @@
 // @namespace   https://github.com/netsys-it/Bots/blob/master/gladiatus.js
 // @description Bot for gladiatus game
 // @include     https://s15-sk.gladiatus.gameforge.com/*
-// @version     1.0.1
+// @version     1.0.2
 // @grant       none
 // ==/UserScript==
 var animalClass = document.getElementsByClassName('expedition_button');
@@ -53,3 +53,37 @@ function checkTime(){
 }
 
 checkTime();
+
+var skills = {"SILA":0,"ZRUCNOST":1,"OBRATNOST":1,"ZDATNOST":0,"CHARIZMA":3,"INTELIGENCIA":0};
+
+function improveSkill()
+{
+  var btn = document.getElementsByClassName('training_button');
+  
+  if(btn.length == 6 )
+  {
+    btn[skills.ZRUCNOST].click();
+  }
+  else if(btn.length == 5 )
+  {
+  btn[skills.CHARIZMA].click();
+  }
+  else if(btn.length == 4)
+  {
+    btn[skills.OBRATNOST].click();
+  }
+  else if(btn.length == 3)
+  {
+    btn[skills.SILA].click();  //sila
+  }
+  else if(btn.length == 2 )
+  {
+    btn[skills.ZDATNOST].click(); 	// zdatnost
+  }
+  else if(btn.length == 1)
+  {
+    btn[skills.INTELIGENCIA].click();  //inteligencia
+  }
+}
+
+improveSkill();
