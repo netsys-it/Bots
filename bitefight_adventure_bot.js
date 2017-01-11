@@ -3,9 +3,18 @@
 // @namespace   danoplaskur@centrum.sk
 // @description Bot for bitefight
 // @include     http://s14.sk.bitefight.gameforge.com/city/adventure/*
-// @version     2
+// @require     https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js
+// @version     3
 // @grant       none
 // ==/UserScript==
+
+
+//Spent all money to clan
+setTimeout(function(){
+	//var x = $(".gold")[2].innerHTML.split(' ')[6];
+	//$("th input")[0].value=x;
+  //$(".btn")[1].click();
+},2000);
 // Empty array
 var chooses = [];
 var btn = document.getElementsByClassName('btn'); 
@@ -50,9 +59,7 @@ if(getHealth() > 5000){
 				btn[Math.floor((Math.random() * btn.length) + 1)].click();
 		}
 	}else{
-		if(chooses.includes("Pokračovať (3 AB)")){
-			btn[chooses.indexOf("Pokračovať (3 AB)")].click();
-		}else if(chooses.includes("Pokračovať")){
+		if(chooses.includes("Pokračovať")){
 			btn[chooses.indexOf("Pokračovať")].click();
 		}else if(chooses.includes("Vhodiť mincu")){
 			btn[chooses.indexOf("Vhodiť mincu")].click();
