@@ -2,7 +2,7 @@
 // @name        Bitefight adventure bot
 // @namespace   danoplaskur@centrum.sk
 // @description Bot for bitefight
-// @include     http://s14.sk.bitefight.gameforge.com/city/adventure/*
+// @include     https://s14-sk.bitefight.gameforge.com/city/adventure/*
 // @require     https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js
 // @version     3
 // @grant       none
