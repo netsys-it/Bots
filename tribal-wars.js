@@ -15,6 +15,7 @@
     var send = document.getElementsByClassName('farm_icon farm_icon_a');
     var disabled = document.getElementsByClassName('farm_icon_disabled start_locked');
     var resources = document.getElementsByClassName('res');
+    var rnd = Math.floor(Math.random() * 100) + 53;
 
     if(!disabled[1]){
         for(i=5;i<resources.length;i+=3){
@@ -28,7 +29,6 @@
     }
     i=0;
     setInterval(function() {
-        var rnd = Math.floor(Math.random() * 100) + 53;
         if(i++ == rnd){
             i = 0;
             location.reload();
