@@ -10,7 +10,7 @@
 
 (function() {
     'use strict';
-    var DEBUG = false
+    var DEBUG = false;
     var i, max;
     var iron = [];
     var send = document.getElementsByClassName('farm_icon farm_icon_a');
